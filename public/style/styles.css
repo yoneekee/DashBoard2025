@@ -1,0 +1,201 @@
+/* Global Body Styles */
+body {
+  margin: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8fafc; /* 밝고 차분한 배경 */
+}
+
+/* Dashboard Layout */
+.dashboard {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 10px; /* 요소 간 마진 최소화 */
+  width: 95%;
+  height: 95%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+}
+
+/* Secondary Indicators */
+.secondary {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f6fc; /* 밝은 블루톤 */
+  color: #333;
+  border-radius: 6px;
+  border: 1px solid #e0e8f0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* 약간 더 강조된 호버 효과 */
+}
+
+.secondary .title {
+  flex: 0 0 12%;
+  background-color: #d9e7f7; /* 부드러운 하늘색 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #2c3e50;
+  border-bottom: 1px solid #e0e8f0;
+}
+
+.secondary .content {
+  flex: 1;
+  background-color: #f2f6fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #444;
+  padding: 8px; /* 최소한의 패딩 */
+}
+
+/* Primary Indicator */
+.primary {
+  grid-row: 1 / span 2;
+  grid-column: 2 / span 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    135deg,
+    #fef5e6,
+    #fbead5
+  ); /* 밝고 따뜻한 오렌지톤 */
+  color: #333;
+  border-radius: 8px;
+  border: 1px solid #f8d6a3;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Primary Section */
+.primary .title {
+  display: flex;
+  justify-content: space-between; /* 좌우로 배치 */
+  align-items: center;
+  padding: 0 15px; /* 좌우 여백 추가 */
+  background-color: #fcdcb1;
+  border-bottom: 1px solid #f8d6a3;
+}
+
+.primary .site-name {
+  margin-left: 0; /* 완전히 좌측으로 */
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #5b4b3a;
+}
+
+.primary .tabs {
+  margin-right: 0; /* 완전히 우측으로 */
+  display: flex;
+  gap: 10px;
+}
+
+.primary .tabs .tab {
+  padding: 5px 10px;
+  background-color: #fff;
+  color: #5b4b3a;
+  border: 1px solid #d8c29d;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.primary .tabs .tab.active {
+  background-color: #f6d365;
+  color: #fff;
+  border-color: #f4b400;
+}
+
+.tab-content.active {
+  display: block; /* 활성화된 탭만 표시 */
+}
+
+.tab-content {
+  display: none; /* 기본적으로 숨김 */
+  width: 100%; /* 부모의 너비 100% */
+  height: 100%; /* 부모의 높이 100% */
+  padding: 20px; /* 콘텐츠 안쪽 여백 */
+  background-color: #fff;
+  color: #333;
+  border-radius: 4px;
+  box-sizing: border-box; /* padding 포함된 영역으로 계산 */
+}
+.primary .tabs .tab:hover {
+  background-color: #f8d6a3;
+  color: #fff;
+}
+
+.primary .content {
+  flex: 1; /* 남은 공간을 차지 */
+  display: flex; /* 내부 콘텐츠 정렬을 위해 flex 사용 */
+  justify-content: center;
+  align-items: center;
+  background-color: #fffcf7;
+  padding: 0; /* 여백 제거 */
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  position: relative; /* 내부 요소를 절대적으로 배치 가능 */
+}
+
+/* Highlighted Indicator (e.g., Secondary 4) */
+.secondary-4 {
+  background-color: #e8f8f0; /* 민트 */
+  color: #0c684f;
+}
+
+.secondary-4 .title {
+  background-color: #d1f0e5;
+  color: #0c684f;
+}
+
+.secondary-4 .content {
+  background-color: #ffffff;
+}
+
+/* Secondary Indicator Positions */
+.secondary-1 {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+}
+
+.secondary-2 {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 1;
+}
+
+.secondary-3 {
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+}
+
+.secondary-5 {
+  grid-row: 1 / span 1;
+  grid-column: 3 / span 1;
+}
+
+.secondary-6 {
+  grid-row: 2 / span 1;
+  grid-column: 3 / span 1;
+}
+
+.secondary-7 {
+  grid-row: 3 / span 1;
+  grid-column: 3 / span 1;
+}
