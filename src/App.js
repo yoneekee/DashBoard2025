@@ -1,18 +1,10 @@
 import React from "react";
-import "./App.css";
+import Dashboard from "./components/DashBoard";
+import "./style/styles.css";
+import "./script/script.js";
 
 function App() {
-  return (
-    <div className="dashboard">
-      <div className="secondary secondary-1">Secondary Indicator</div>
-      <div className="secondary secondary-2">Secondary Indicator</div>
-      <div className="primary">Primary Indicator</div>
-      <div className="secondary secondary-3">Secondary Indicator</div>
-      <div className="secondary secondary-4">Secondary Indicator</div>
-      <div className="secondary secondary-5">Secondary Indicator</div>
-      <div className="secondary secondary-6">Secondary Indicator</div>
-    </div>
-  );
+  return <Dashboard />;
 }
 
 export default App;
