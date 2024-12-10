@@ -117,7 +117,7 @@ const Secondary4 = () => {
   return (
     <div className="secondary secondary-4">
       <div className="title">Monthly Sales Turnover</div>
-      <div className="content">
+      <div className="chart-content">
         <Line data={data} options={options} />
       </div>
     </div>

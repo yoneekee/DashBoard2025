@@ -163,24 +163,21 @@ body {
 }
 
 /* Highlighted Indicator (e.g., Secondary 4) */
+/* Secondary-4 Styles */
 .secondary-4 {
-  grid-row: 3 / span 1; /* 기존 row 범위 */
-  grid-column: 2 / span 1; /* 기존 column 범위 */
+  grid-row: 3 / span 1;
+  grid-column: 2 / span 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* 세로 가운데 정렬 */
-  align-items: center; /* 가로 가운데 정렬 */
   background-color: #f2f6fc;
   border: 1px solid #e0e8f0;
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  padding: 2px; /* 충분한 내부 여백 */
+  padding: 10px;
+  overflow: hidden;
 }
 
 .secondary-4 .title {
-  width: 92%;
-  padding-left: 10px;
-  padding-right: 10px;
   font-size: 1rem;
   font-weight: bold;
   color: #2c3e50;
@@ -188,15 +185,21 @@ body {
   margin-bottom: 10px;
 }
 
-.secondary-4 .content {
-  width: 92%;
+.secondary-4 .chart-content {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eef5fc;
-  border: 1px solid #d1e3f0;
-  border-radius: 8px;
+  background-color: #fff;
+  border-radius: 6px;
   padding: 10px;
+  height: 220px; /* 차트 영역 높이 */
+  overflow: hidden;
+}
+
+.chart-content canvas {
+  max-height: 100%; /* 차트의 최대 높이 제한 */
+  max-width: 100%; /* 차트의 최대 너비 제한 */
 }
 
 /* Secondary Indicator Positions */
@@ -558,6 +561,7 @@ body {
   background-color: #f9fbfc;
   border: 1px solid #e0e8f0;
   border-radius: 8px;
+  padding: 16px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -574,12 +578,12 @@ body {
   flex-direction: column; /* 차트와 추가 내용을 세로로 정렬 */
   justify-content: center; /* 세로 중앙 정렬 */
   align-items: center; /* 가로 중앙 정렬 */
-  height: 100%; /* 부모 컨테이너에 맞게 확장 */
+  height: 90%; /* 부모 컨테이너에 맞게 확장 */
 }
 
 .chart-container {
   width: 100%; /* 부모 너비에 맞춤 */
-  height: 170px; /* 적절한 높이 설정 */
+  height: 160px; /* 적절한 높이 설정 */
   position: relative; /* 차트 크기 제한 */
 }
 
