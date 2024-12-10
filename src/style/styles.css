@@ -164,17 +164,39 @@ body {
 
 /* Highlighted Indicator (e.g., Secondary 4) */
 .secondary-4 {
-  background-color: #e8f8f0; /* 민트 */
-  color: #0c684f;
+  grid-row: 3 / span 1; /* 기존 row 범위 */
+  grid-column: 2 / span 1; /* 기존 column 범위 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 세로 가운데 정렬 */
+  align-items: center; /* 가로 가운데 정렬 */
+  background-color: #f2f6fc;
+  border: 1px solid #e0e8f0;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  padding: 2px; /* 충분한 내부 여백 */
 }
 
 .secondary-4 .title {
-  background-color: #d1f0e5;
-  color: #0c684f;
+  width: 92%;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .secondary-4 .content {
-  background-color: #ffffff;
+  width: 92%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eef5fc;
+  border: 1px solid #d1e3f0;
+  border-radius: 8px;
+  padding: 10px;
 }
 
 /* Secondary Indicator Positions */
@@ -275,8 +297,96 @@ body {
 }
 
 .secondary-2 {
-  grid-row: 2 / span 1;
-  grid-column: 1 / span 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f6fc; /* 밝은 블루톤 */
+  color: #333;
+  border-radius: 6px;
+  border: 1px solid #e0e8f0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.secondary-2 .title {
+  flex: 0 0 auto; /* 높이 고정 */
+  padding: 8px 12px; /* 내부 여백 */
+  background-color: #d9e7f7; /* 부드러운 하늘색 */
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #2c3e50;
+  border-bottom: 1px solid #e0e8f0;
+}
+
+.secondary-2 .content {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  max-height: 200px; /* 컨텐츠 높이 제한 */
+  overflow-y: auto; /* 스크롤 활성화 */
+}
+
+.schedule-box {
+  margin-top: 80px;
+}
+
+.schedule-list {
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.schedule-item:hover {
+  background-color: #f0f8ff;
+}
+
+.time {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-right: 15px;
+}
+
+.task {
+  font-size: 0.8rem;
+  color: #34495e;
+  margin-right: 15px;
+}
+
+.status {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+/* 스크롤바 스타일 */
+.secondary-2 .content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.secondary-2 .content::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.secondary-2 .content::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.secondary-2 .content::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 4px;
 }
 
 .secondary-3 {
@@ -411,9 +521,69 @@ body {
 .secondary-6 {
   grid-row: 2 / span 1;
   grid-column: 3 / span 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9fbfc;
+  border: 1px solid #e0e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-6 .title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.chart-container {
+  position: relative;
+  height: 300px; /* 차트 높이 */
+  width: 100%; /* 부모의 너비에 맞춤 */
+}
+
+.secondary-6:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* 호버 시 그림자 강화 */
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
 }
 
 .secondary-7 {
   grid-row: 3 / span 1;
   grid-column: 3 / span 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9fbfc;
+  border: 1px solid #e0e8f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-7 .title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.secondary-7 .content {
+  display: flex;
+  flex-direction: column; /* 차트와 추가 내용을 세로로 정렬 */
+  justify-content: center; /* 세로 중앙 정렬 */
+  align-items: center; /* 가로 중앙 정렬 */
+  height: 100%; /* 부모 컨테이너에 맞게 확장 */
+}
+
+.chart-container {
+  width: 100%; /* 부모 너비에 맞춤 */
+  height: 170px; /* 적절한 높이 설정 */
+  position: relative; /* 차트 크기 제한 */
+}
+
+.doughnut-chart {
+  max-width: 70%; /* 차트의 최대 크기 제한 */
+  height: auto; /* 비율 유지 */
 }
