@@ -19,7 +19,7 @@
 
 .title {
   flex: 0 0 auto;
-  padding: 6px 8px;
+  padding: 0.5vw 0.5vh;
   background-color: #d9e7f7;
   font-size: 1rem;
   font-weight: 600;
@@ -37,6 +37,7 @@
   border-radius: 8px;
   max-height: 200px;
   padding: 10px;
+  margin: auto 0;
 }
 
 .chartContent {
@@ -46,11 +47,11 @@
   align-items: center;
   background-color: #fff;
   border-radius: 6px;
-  padding: 10px;
-  height: 220px; /* 차트 영역 높이 */
+  padding: 5px;
+  height: 100%;
+  margin: auto 0;
 }
 
 canvas {
-  max-height: 100%; /* 차트의 최대 높이 제한 */
-  max-width: 100%; /* 차트의 최대 너비 제한 */
+  height: 16vh; /* 차트 영역 높이 */
 }

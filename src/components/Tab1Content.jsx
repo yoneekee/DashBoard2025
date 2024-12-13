@@ -1,7 +1,7 @@
 import React from "react";
 
 const Tab1Content = () => {
-  return <div>Complex Content for Tab 1</div>;
+  return <div>Total Navigation</div>;
 };
 
 export default Tab1Content;

@@ -32,11 +32,12 @@
   display: flex;
   flex-direction: row;
   gap: 12px;
-  padding: 10px;
+  padding: 0.5vw 0.5vh;
   background-color: #f9f9f9;
   border-radius: 8px;
-  max-height: 200px;
+  height: 100%;
   padding: 10px;
+  margin: auto 0;
 }
 
 .circleContainer {
@@ -46,12 +47,14 @@
   justify-content: center; /* 가로 중앙 정렬 */
   align-items: center; /* 세로 중앙 정렬 */
   width: 100%; /* 컨테이너 전체 너비 사용 */
+  height: 100%; /* 컨테이너 전체 너비 사용 */
 }
 
 .circleResultContainer {
-  width: 90%; /* 컨테이너 너비 */
+  width: 70%; /* 컨테이너 너비 */
   display: flex;
   flex-direction: column; /* 세로 방향으로 정렬 */
+  justify-content: space-around;
   gap: 5px; /* 항목 간 간격 */
   padding: 5px;
   border-radius: 6px;
@@ -81,12 +84,12 @@
 /* 개별 원형 그래프 */
 .circle {
   position: relative;
-  width: 60px; /* 그래프 크기 조정 */
-  height: 70px; /* 설명 포함 높이 */
+  margin-left: 5px;
   display: flex;
   flex-direction: column; /* 그래프와 설명을 세로로 배치 */
   align-items: center;
-  animation: fadeInRight 1s ease-in-out; /* 오른쪽에서 등장 애니메이션 */
+  animation: progressFill 0.4s ease-in-out forwards; /* 애니메이션 */
+  transition: width 0.5s ease-in-out; /* 부드러운 변화 */
 }
 
 .progress:hover {
@@ -95,8 +98,8 @@
 }
 
 .progress {
-  width: 50px;
-  height: 50px;
+  width: 4vw;
+  height: 8vh;
   background: conic-gradient(
     #4e9de2 calc(var(--percentage) * 1%),
     #b7dbff calc(var(--percentage) * 1%)
@@ -104,9 +107,19 @@
   border-radius: 50%;
 }
 
+/* 프로그레스바가 차오르는 애니메이션 */
+@keyframes progressFill {
+  from {
+    width: 0;
+  }
+  to {
+    width: 4vw; /* 최종 너비 */
+  }
+}
+
 .circleTxt {
   position: absolute;
-  top: 35%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 0.8rem;

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Tab3Content = () => {
-  return <div>Complex Content for Tab 3</div>;
+  return <div>Setting and Edit</div>;
 };
 
 export default Tab3Content;

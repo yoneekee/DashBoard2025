@@ -20,7 +20,7 @@
 
 .title {
   flex: 0 0 auto;
-  padding: 6px 8px;
+  padding: 0.5vw 0.5vh;
   width: 100%;
   background-color: #d9e7f7;
   font-size: 1rem;
@@ -34,9 +34,11 @@
   position: relative;
   display: flex;
   align-items: center;
-  height: 300px; /* 차트 높이 */
-  width: 95%; /* 부모의 너비에 맞춤 */
+  width: 22vw; /* 부모 너비에 맞춤 */
+  height: 24vh; /* 적절한 높이 설정 */
   align-items: center;
+  margin: auto 0;
+  background-color: #f9f9f9;
 }
 
 canvas {
