@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../style/Secondary2.module.css";
 
 const Secondary2 = () => {
   const schedule = [
@@ -14,27 +15,30 @@ const Secondary2 = () => {
   const getStatusStyle = (status) => {
     switch (status) {
       case "Completed":
-        return { color: "green", fontWeight: "bold" };
+        return { color: "green" };
       case "In Progress":
-        return { color: "blue", fontWeight: "bold" };
+        return { color: "blue" };
       case "Pending":
-        return { color: "orange", fontWeight: "bold" };
+        return { color: "orange" };
       default:
         return { color: "gray" };
     }
   };
 
   return (
-    <div className="secondary secondary-2">
-      <div className="title">Today's Schedule</div>
-      <div className="content">
-        <div className="schedule-box">
-          <ul className="schedule-list">
+    <div className={styles.secondary}>
+      <div className={styles.title}>Today's Schedule</div>
+      <div className={styles.content}>
+        <div className={styles.scheduleBox}>
+          <ul className={styles.scheduleList}>
             {schedule.map((item, index) => (
-              <li key={index} className="schedule-item">
-                <span className="time">{item.time}</span>
-                <span className="task">{item.task}</span>
-                <span className="status" style={getStatusStyle(item.status)}>
+              <li key={index} className={styles.scheduleItem}>
+                <span className={styles.time}>{item.time}</span>
+                <span className={styles.task}>{item.task}</span>
+                <span
+                  className={styles.status}
+                  style={getStatusStyle(item.status)}
+                >
                   {item.status}
                 </span>
               </li>

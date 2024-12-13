@@ -1,0 +1,87 @@
+.primary {
+  grid-row: 1 / span 2;
+  grid-column: 2 / span 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    135deg,
+    #fef5e6,
+    #fbead5
+  ); /* 밝고 따뜻한 오렌지톤 */
+  color: #333;
+  border-radius: 8px;
+  border: 1px solid #f8d6a3;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Primary Section */
+.primary .title {
+  display: flex;
+  justify-content: space-between; /* 좌우로 배치 */
+  align-items: center;
+  padding: 0 15px; /* 좌우 여백 추가 */
+  background-color: #fcdcb1;
+  border-bottom: 1px solid #f8d6a3;
+}
+
+.primary .site-name {
+  margin-left: 0; /* 완전히 좌측으로 */
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #5b4b3a;
+}
+
+.primary .tabs {
+  margin-right: 0; /* 완전히 우측으로 */
+  display: flex;
+  gap: 10px;
+}
+
+.primary .tabs .tab {
+  padding: 5px 10px;
+  background-color: #fff;
+  color: #5b4b3a;
+  border: 1px solid #d8c29d;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.primary .tabs .tab.active {
+  background-color: #f6d365;
+  color: #fff;
+  border-color: #f4b400;
+}
+
+.tab-content.active {
+  display: block; /* 활성화된 탭만 표시 */
+}
+
+.tab-content {
+  display: none; /* 기본적으로 숨김 */
+  width: 100%; /* 부모의 너비 100% */
+  height: 100%; /* 부모의 높이 100% */
+  padding: 20px; /* 콘텐츠 안쪽 여백 */
+  background-color: #fff;
+  color: #333;
+  border-radius: 4px;
+  box-sizing: border-box; /* padding 포함된 영역으로 계산 */
+}
+.primary .tabs .tab:hover {
+  background-color: #f8d6a3;
+  color: #fff;
+}
+
+.primary .content {
+  flex: 1; /* 남은 공간을 차지 */
+  display: flex; /* 내부 콘텐츠 정렬을 위해 flex 사용 */
+  justify-content: center;
+  align-items: center;
+  background-color: #fffcf7;
+  padding: 0; /* 여백 제거 */
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  position: relative; /* 내부 요소를 절대적으로 배치 가능 */
+}

@@ -1,0 +1,107 @@
+.secondary {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f6fc;
+  color: #333;
+  border-radius: 6px;
+  border: 1px solid #e0e8f0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  flex: 0 0 auto;
+  padding: 6px 8px;
+  background-color: #d9e7f7;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #2c3e50;
+  border-bottom: 1px solid #e0e8f0;
+}
+
+.content {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  max-height: 200px;
+  padding: 10px;
+}
+
+/* 스크롤바 스타일 */
+.content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.content::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+.scheduleList {
+  list-style: none; /* 불필요한 기본 리스트 스타일 제거 */
+  margin: 0; /* 리스트 전체 외부 여백 제거 */
+  padding: 10px;
+}
+
+.scheduleItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  margin-bottom: 10px; /* 항목 간 간격 */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.schedule-item:hover {
+  background-color: #f0f8ff; /* 호버 시 강조 */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.time {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.task {
+  font-size: 0.8rem;
+  color: #34495e;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.status {
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: right;
+  min-width: 90px;
+}

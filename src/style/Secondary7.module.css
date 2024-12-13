@@ -1,0 +1,51 @@
+.secondary {
+  grid-row: 3 / span 1;
+  grid-column: 3 / span 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f6fc;
+  color: #333;
+  border-radius: 6px;
+  border: 1px solid #e0e8f0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  flex: 0 0 auto;
+  padding: 6px 8px;
+  background-color: #d9e7f7;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #2c3e50;
+  border-bottom: 1px solid #e0e8f0;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  max-height: 200px;
+  padding: 10px;
+}
+
+.chartContainer {
+  width: 100%; /* 부모 너비에 맞춤 */
+  height: 160px; /* 적절한 높이 설정 */
+  position: relative; /* 차트 크기 제한 */
+}
+
+.doughnutChart {
+  max-width: 70%; /* 차트의 최대 크기 제한 */
+  height: auto; /* 비율 유지 */
+}

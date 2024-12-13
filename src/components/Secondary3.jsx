@@ -1,10 +1,11 @@
 import React from "react";
+import styles from "../style/Secondary3.module.css";
 
 const Secondary3 = () => {
   return (
-    <div className="secondary secondary-3">
-      <div className="title">Title 3</div>
-      <div className="content">Content 3</div>
+    <div className={styles.secondary}>
+      <div className={styles.title}>Title 3</div>
+      <div className={styles.content}>Content 3</div>
     </div>
   );
 };

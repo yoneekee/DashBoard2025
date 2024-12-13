@@ -1,56 +1,69 @@
 import React from "react";
+import styles from "../style/Secondary5.module.css";
 
 const Secondary5 = () => {
   return (
-    <div className="secondary secondary-5">
-      <div className="title">Circular Progress</div>
-      <div className="content">
-        <div className="circle-container">
-          <div className="circle">
-            <div className="progress" style={{ "--percentage": 75 }}></div>
-            <div className="circle-text">75%</div>
-            <div className="circle-description">Users</div>
+    <div className={styles.secondary}>
+      <div className={styles.title}>Circular Progress</div>
+      <div className={styles.content}>
+        <div className={styles.circleContainer}>
+          <div className={styles.circle}>
+            <div
+              className={styles.progress}
+              style={{ "--percentage": 75 }}
+            ></div>
+            <div className={styles.circleTxt}>75%</div>
+            <div className={styles.circleDesc}>Users</div>
           </div>
-          <div className="circle">
-            <div className="progress" style={{ "--percentage": 50 }}></div>
-            <div className="circle-text">50%</div>
-            <div className="circle-description">Orders</div>
+          <div className={styles.circle}>
+            <div
+              className={styles.progress}
+              style={{ "--percentage": 50 }}
+            ></div>
+            <div className={styles.circleTxt}>50%</div>
+            <div className={styles.circleDesc}>Orders</div>
           </div>
-          <div className="circle">
-            <div className="progress" style={{ "--percentage": 25 }}></div>
-            <div className="circle-text">25%</div>
-            <div className="circle-description">Visits</div>
+          <div className={styles.circle}>
+            <div
+              className={styles.progress}
+              style={{ "--percentage": 25 }}
+            ></div>
+            <div className={styles.circleTxt}>25%</div>
+            <div className={styles.circleDesc}>Visits</div>
           </div>
-          <div className="circle">
-            <div className="progress" style={{ "--percentage": 90 }}></div>
-            <div className="circle-text">90%</div>
-            <div className="circle-description">ETC</div>
+          <div className={styles.circle}>
+            <div
+              className={styles.progress}
+              style={{ "--percentage": 90 }}
+            ></div>
+            <div className={styles.circleTxt}>90%</div>
+            <div className={styles.circleDesc}>ETC</div>
           </div>
         </div>
-        <div className="circle-result-container">
-          <div className="result-item">
-            <span className="result-title">A:</span>
-            <span className="result-value">75% ⬆️</span>
+        <div className={styles.circleResultContainer}>
+          <div className={styles.resultItem}>
+            <span className={styles.resultTitle}>A:</span>
+            <span className={styles.resultValue}>75% ⬆️</span>
           </div>
-          <div className="result-item">
-            <span className="result-title">B:</span>
-            <span className="result-value">50% ⬆️</span>
+          <div className={styles.resultItem}>
+            <span className={styles.resultTitle}>B:</span>
+            <span className={styles.resultValue}>50% ⬆️</span>
           </div>
-          <div className="result-item">
-            <span className="result-title">C:</span>
-            <span className="result-value">25% ⬆️</span>
+          <div className={styles.resultItem}>
+            <span className={styles.resultTitle}>C:</span>
+            <span className={styles.resultValue}>25% ⬆️</span>
           </div>
-          <div className="result-item">
-            <span className="result-title">D:</span>
-            <span className="result-value">90% ⬇️</span>
+          <div className={styles.resultItem}>
+            <span className={styles.resultTitle}>D:</span>
+            <span className={styles.resultValue}>90% ⬇️</span>
           </div>
-          <div className="result-item">
-            <span className="result-title">E:</span>
-            <span className="result-value">90% ⬆️</span>
+          <div className={styles.resultItem}>
+            <span className={styles.resultTitle}>E:</span>
+            <span className={styles.resultValue}>90% ⬆️</span>
           </div>
-          <div className="result-item">
-            <span className="result-title">F:</span>
-            <span className="result-value">90% ⬇️</span>
+          <div className={styles.resultItem}>
+            <span className={styles.resultTitle}>F:</span>
+            <span className={styles.resultValue}>90% ⬇️</span>
           </div>
         </div>
       </div>

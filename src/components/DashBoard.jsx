@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../style/Dashboard.module.css";
 import Secondary1 from "./Secondary1";
 import Secondary2 from "./Secondary2";
 import Secondary3 from "./Secondary3";
@@ -10,7 +11,7 @@ import Primary from "./Primary";
 
 const DashBoard = () => {
   return (
-    <div className="dashboard">
+    <div className={styles.dashboard}>
       <Secondary1 />
       <Secondary2 />
       <Primary />

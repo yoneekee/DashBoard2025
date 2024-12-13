@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Tab1Content from "./Tab1Content";
 import Tab2Content from "./Tab2Content";
 import Tab3Content from "./Tab3Content";
+import "../style/Primary.css";
+import "../script/primary.js";
 
 const Primary = () => {
   const [activeTab, setActiveTab] = useState("tab1-content");

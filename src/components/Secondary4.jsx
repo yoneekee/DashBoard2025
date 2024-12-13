@@ -1,5 +1,6 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
+import styles from "../style/Secondary4.module.css";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -115,9 +116,9 @@ const Secondary4 = () => {
   };
 
   return (
-    <div className="secondary secondary-4">
-      <div className="title">Monthly Sales Turnover</div>
-      <div className="chart-content">
+    <div className={styles.secondary}>
+      <div className={styles.title}>Monthly Sales Turnover</div>
+      <div className={styles.chartContent}>
         <Line data={data} options={options} />
       </div>
     </div>

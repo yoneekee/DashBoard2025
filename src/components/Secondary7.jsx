@@ -1,6 +1,7 @@
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import styles from "../style/Secondary7.module.css";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -39,10 +40,10 @@ const Secondary7 = () => {
   };
 
   return (
-    <div className="secondary secondary-7">
-      <div className="title">User Demographics</div>
-      <div className="content">
-        <div className="chart-container">
+    <div className={styles.secondary}>
+      <div className={styles.title}>User Demographics</div>
+      <div className={styles.content}>
+        <div className={styles.chartContainer}>
           <Doughnut data={data} options={options} />
         </div>
       </div>

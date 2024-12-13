@@ -1,5 +1,6 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
+import styles from "../style/Secondary6.module.css";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -81,9 +82,9 @@ const Secondary6 = () => {
   };
 
   return (
-    <div className="secondary secondary-6">
-      <div className="title">Top Selling Products</div>
-      <div className="chart-container">
+    <div className={styles.secondary}>
+      <div className={styles.title}>Top Selling Products</div>
+      <div className={styles.chartContainer}>
         <Bar data={data} options={options} />
       </div>
     </div>
