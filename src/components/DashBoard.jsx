@@ -1,25 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../style/Dashboard.module.css";
-import Secondary1 from "./Secondary1";
-import Secondary2 from "./Secondary2";
-import Secondary3 from "./Secondary3";
-import Secondary4 from "./Secondary4";
-import Secondary5 from "./Secondary5";
-import Secondary6 from "./Secondary6";
-import Secondary7 from "./Secondary7";
-import Primary from "./Primary";
+import DashBoard1 from "./DashBoard1";
+import DashBoard2 from "./DashBoard2";
+import DashBoard3 from "./DashBoard3";
 
 const DashBoard = () => {
+  const dashboards = [<DashBoard1 />, <DashBoard2 />, <DashBoard3 />];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? dashboards.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === dashboards.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
-    <div className={styles.dashboard}>
-      <Secondary1 />
-      <Secondary2 />
-      <Primary />
-      <Secondary3 />
-      <Secondary4 />
-      <Secondary5 />
-      <Secondary6 />
-      <Secondary7 />
+    <div className={styles.container}>
+      <button className={styles.btn} onClick={handlePrev}>
+        ◀
+      </button>
+
+      {dashboards[currentIndex]}
+      <button className={styles.btn} onClick={handleNext}>
+        ▶
+      </button>
     </div>
   );
 };

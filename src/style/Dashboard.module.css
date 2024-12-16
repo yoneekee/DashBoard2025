@@ -1,3 +1,27 @@
+/* 버튼과 대시보드를 감싸는 전체 컨테이너 */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px; /* 버튼과 대시보드 간 간격 */
+}
+
+/* 버튼 스타일 */
+.btn {
+  font-size: 30px; /* 화살표 크기 */
+  cursor: pointer;
+  border: none;
+  background: none; /* 배경 제거 */
+  color: #333; /* 화살표 색상 */
+  padding: 10px;
+  transition: color 0.3s ease; /* 호버 시 색상 전환 */
+}
+
+.btn:hover {
+  color: #007bff; /* 호버 시 화살표 색상 */
+}
+
+/* 대시보드는 기존 스타일 유지 */
 .dashboard {
   height: 95vh;
   width: 92vw;

@@ -1,5 +1,3 @@
-//import styles from "../style/Primary.css";
-
 document.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll(".tab");
   const tabContents = document.querySelectorAll(".tabContent");
