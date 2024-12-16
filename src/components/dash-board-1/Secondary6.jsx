@@ -1,6 +1,6 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
-import styles from "../../style/Secondary6.module.css";
+import styles from "../../style/dash-board-1/Secondary6.module.css";
 import {
   Chart as ChartJS,
   CategoryScale,

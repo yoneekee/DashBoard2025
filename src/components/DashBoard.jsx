@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styles from "../style/Dashboard.module.css";
 import MenuBar from "./MenuBar";
-import DashBoard1 from "./DashBoard1";
-import DashBoard2 from "./DashBoard2";
-import DashBoard3 from "./DashBoard3";
+import DashBoard1 from "./dash-board-1/DashBoard1";
+import DashBoard2 from "./dash-board-2/DashBoard2";
+import DashBoard3 from "./dash-board-3/DashBoard3";
 
 const DashBoard = () => {
   const dashboards = [

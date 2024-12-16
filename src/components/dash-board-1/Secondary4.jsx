@@ -1,6 +1,6 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
-import styles from "../../style/Secondary4.module.css";
+import styles from "../../style/dash-board-1/Secondary4.module.css";
 
 import {
   Chart as ChartJS,

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../style/Secondary1.module.css";
+import styles from "../../style/dash-board-1/Secondary1.module.css";
 
 const Secondary1 = () => {
   return (
