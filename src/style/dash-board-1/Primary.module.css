@@ -3,10 +3,10 @@
   grid-column: 2 / span 1;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #fef5e6, #fbead5); /* 오렌지톤 */
+  /*background: linear-gradient(135deg, #e6f8fe, #d5e7fb);*/
   color: #333;
   border-radius: 8px;
-  border: 1px solid #f8d6a3;
+  border: 1px solid #a3c6f8;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
@@ -15,9 +15,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15px;
-  background-color: #fcdcb1;
-  border-bottom: 1px solid #f8d6a3;
+  padding: 2px 22px;
+  background-color: #a0ccff;
+  border-bottom: 1px solid #a3c4f8;
 }
 
 .siteName {
@@ -37,7 +37,7 @@
   padding: 5px 10px;
   background-color: #fff;
   color: #5b4b3a;
-  border: 1px solid #d8c29d;
+  border: 1px solid #1f94ca;
   border-radius: 4px;
   font-size: 0.9rem;
   cursor: pointer;
@@ -45,13 +45,13 @@
 }
 
 .tabActive {
-  background-color: #f6d365;
+  background-color: #007bff;
   color: #fff;
-  border-color: #f4b400;
+  border-color: #1093ff;
 }
 
 .tab:hover {
-  background-color: #f8d6a3;
+  background-color: #26b7ff;
   color: #fff;
 }
 
@@ -60,9 +60,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fffcf7;
+  background-color: #f7faff;
   padding: 0;
-  border: 1px solid #e1e4e8;
+  border: 1px solid #e1e3e8;
   border-radius: 4px;
   position: relative;
 }

@@ -26,7 +26,6 @@
   font-size: 16px;
   color: #5e5e5e;
   cursor: pointer;
-  border-bottom: 1px solid #f1f3f5;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -40,7 +39,7 @@
   display: none;
   position: absolute;
   background-color: #f6faff;
-  border: 1px solid #bacfe3;
+  border: 2px solid #c8def2;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 100;

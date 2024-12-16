@@ -29,15 +29,21 @@ const DashBoard = () => {
   return (
     <div className={styles.container}>
       <div className={styles.container}>
+        {/*Prev Button*/}
         <button className={styles.btn} onClick={handlePrev}>
           &lt;
         </button>
+
+        {/*Dash Board*/}
         {dashboards[currentIndex].component}
+
+        {/*Next Button*/}
         <button className={styles.btn} onClick={handleNext}>
           &gt;
         </button>
       </div>
 
+      {/*Menu Bar*/}
       <MenuBar
         menus={dashboards}
         activeMenu={currentIndex}
