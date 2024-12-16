@@ -24,12 +24,12 @@ const DashBoard = () => {
   return (
     <div className={styles.container}>
       <button className={styles.btn} onClick={handlePrev}>
-        ◀
+        &lt;
       </button>
 
       {dashboards[currentIndex]}
       <button className={styles.btn} onClick={handleNext}>
-        ▶
+        &gt;
       </button>
     </div>
   );

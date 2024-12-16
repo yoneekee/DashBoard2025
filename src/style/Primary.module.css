@@ -3,11 +3,7 @@
   grid-column: 2 / span 1;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(
-    135deg,
-    #fef5e6,
-    #fbead5
-  ); /* 오렌지톤 */
+  background: linear-gradient(135deg, #fef5e6, #fbead5); /* 오렌지톤 */
   color: #333;
   border-radius: 8px;
   border: 1px solid #f8d6a3;
@@ -15,29 +11,29 @@
   overflow: hidden;
 }
 
-.primary .title {
+.title {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
-  padding: 0 15px; 
+  padding: 0 15px;
   background-color: #fcdcb1;
   border-bottom: 1px solid #f8d6a3;
 }
 
-.primary .site-name {
-  margin-left: 0; 
+.siteName {
+  margin-left: 0;
   font-size: 1.2rem;
   font-weight: 700;
   color: #5b4b3a;
 }
 
-.primary .tabs {
-  margin-right: 0; 
+.tabs {
+  margin-right: 0;
   display: flex;
   gap: 10px;
 }
 
-.primary .tabs .tab {
+.tab {
   padding: 5px 10px;
   background-color: #fff;
   color: #5b4b3a;
@@ -48,39 +44,40 @@
   transition: background-color 0.2s, color 0.2s;
 }
 
-.primary .tabs .tab.active {
+.tabActive {
   background-color: #f6d365;
   color: #fff;
   border-color: #f4b400;
 }
 
-.tab-content.active {
-  display: block; 
-}
-
-.tab-content {
-  display: none; 
-  width: 100%; 
-  height: 100%; 
-  padding: 20px; 
-  background-color: #fff;
-  color: #333;
-  border-radius: 4px;
-  box-sizing: border-box; 
-}
-.primary .tabs .tab:hover {
+.tab:hover {
   background-color: #f8d6a3;
   color: #fff;
 }
 
-.primary .content {
-  flex: 1; 
-  display: flex; 
+.content {
+  flex: 1;
+  display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fffcf7;
-  padding: 0; 
+  padding: 0;
   border: 1px solid #e1e4e8;
   border-radius: 4px;
-  position: relative; 
+  position: relative;
+}
+
+.tabContent {
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.tabContentActive {
+  display: block;
 }

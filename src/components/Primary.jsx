@@ -2,27 +2,28 @@ import React, { useState } from "react";
 import Tab1Content from "./Tab1Content";
 import Tab2Content from "./Tab2Content";
 import Tab3Content from "./Tab3Content";
-import "../style/Primary.css";
-import "../script/primary.js";
+import styles from "../style/Primary.module.css";
 
 const Primary = () => {
-  const [activeTab, setActiveTab] = useState("tab1-content");
+  const [activeTab, setActiveTab] = useState("tab1");
 
   const tabs = [
-    { id: "tab1-content", label: "1", content: <Tab1Content /> },
-    { id: "tab2-content", label: "2", content: <Tab2Content /> },
-    { id: "tab3-content", label: "3", content: <Tab3Content /> },
+    { id: "tab1", label: "1", content: <Tab1Content /> },
+    { id: "tab2", label: "2", content: <Tab2Content /> },
+    { id: "tab3", label: "3", content: <Tab3Content /> },
   ];
 
   return (
-    <div className="primary">
-      <div className="title">
-        <div className="site-name">My Site</div>
-        <div className="tabs">
+    <div className={styles.primary}>
+      <div className={styles.title}>
+        <div className={styles.siteName}>My Site</div>
+        <div className={styles.tabs}>
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              className={`tab ${activeTab === tab.id ? "active" : ""}`}
+              className={`${styles.tab} ${
+                activeTab === tab.id ? styles.tabActive : ""
+              }`}
               onClick={() => setActiveTab(tab.id)}
             >
               {tab.label}
@@ -30,12 +31,14 @@ const Primary = () => {
           ))}
         </div>
       </div>
-      <div className="content">
+      <div className={styles.content}>
         {tabs.map((tab) =>
           activeTab === tab.id ? (
             <div
               key={tab.id}
-              className={`tab-content ${activeTab === tab.id ? "active" : ""}`}
+              className={`${styles.tabContent} ${
+                activeTab === tab.id ? styles.tabContentActive : ""
+              }`}
             >
               {tab.content}
             </div>
