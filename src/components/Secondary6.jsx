@@ -11,7 +11,7 @@ import {
   Legend,
 } from "chart.js";
 
-// Chart.js 기본 설정 등록
+// Chart.js 
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -22,7 +22,6 @@ ChartJS.register(
 );
 
 const Secondary6 = () => {
-  // Chart.js 데이터와 옵션
   const data = {
     labels: ["Product A", "Product B", "Product C", "Product D"],
     datasets: [

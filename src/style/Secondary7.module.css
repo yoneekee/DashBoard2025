@@ -40,13 +40,13 @@
 }
 
 .chartContainer {
-  width: 25vw; /* 부모 너비에 맞춤 */
-  height: 27vh; /* 적절한 높이 설정 */
-  position: relative; /* 차트 크기 제한 */
+  width: 25vw;
+  height: 27vh;
+  position: relative;
   margin: auto 0;
 }
 
 .doughnutChart {
-  max-width: 90%; /* 차트의 최대 크기 제한 */
-  height: auto; /* 비율 유지 */
+  max-width: 90%;
+  height: auto;
 }

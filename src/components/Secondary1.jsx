@@ -6,12 +6,10 @@ const Secondary1 = () => {
     <div className={styles.secondary}>
       <div className={styles.title}>Status Overview</div>
       <div className={styles.content}>
-        {/* 그래프 영역 */}
         <div className={styles.graphContainer}>
           <div className={styles.graphPlaceholder}>Graph Area</div>
         </div>
 
-        {/* 통계 항목 영역 */}
         <div className={styles.statsContainer}>
           <div className={styles.statItem}>
             <div className={styles.statTitle}>Unread</div>

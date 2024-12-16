@@ -34,15 +34,15 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: 22vw; /* 부모 너비에 맞춤 */
-  height: 24vh; /* 적절한 높이 설정 */
+  width: 22vw; 
+  height: 24vh; 
   align-items: center;
   margin: auto 0;
   background-color: #f9f9f9;
 }
 
 canvas {
-  max-height: 100%; /* 차트의 최대 높이 제한 */
-  max-width: 100%; /* 차트의 최대 너비 제한 */
+  max-height: 100%; 
+  max-width: 100%; 
   margin-bottom: 20px;
 }

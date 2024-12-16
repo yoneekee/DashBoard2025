@@ -10,10 +10,10 @@ import {
   Title,
   Tooltip,
   Legend,
-  Filler, // Area 차트를 위한 플러그인
+  Filler, 
 } from "chart.js";
 
-// Chart.js 기본 설정 등록
+// Chart.js 
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -26,7 +26,6 @@ ChartJS.register(
 );
 
 const Secondary4 = () => {
-  // Chart.js 데이터와 옵션
   const data = {
     labels: [
       "Jan",
@@ -69,7 +68,7 @@ const Secondary4 = () => {
         display: true,
         position: "top",
         labels: {
-          color: "#333", // 범례 색상
+          color: "#333", 
           font: {
             size: 12,
           },

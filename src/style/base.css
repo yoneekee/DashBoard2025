@@ -1,12 +1,9 @@
-/* Global Body Styles */
-
 html,
 body,
 #root {
   height: 100%;
 }
 
-/* Global Styles */
 html,
 body {
   margin: 0;

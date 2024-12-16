@@ -7,7 +7,7 @@
     135deg,
     #fef5e6,
     #fbead5
-  ); /* 밝고 따뜻한 오렌지톤 */
+  ); /* 오렌지톤 */
   color: #333;
   border-radius: 8px;
   border: 1px solid #f8d6a3;
@@ -15,25 +15,24 @@
   overflow: hidden;
 }
 
-/* Primary Section */
 .primary .title {
   display: flex;
-  justify-content: space-between; /* 좌우로 배치 */
+  justify-content: space-between; 
   align-items: center;
-  padding: 0 15px; /* 좌우 여백 추가 */
+  padding: 0 15px; 
   background-color: #fcdcb1;
   border-bottom: 1px solid #f8d6a3;
 }
 
 .primary .site-name {
-  margin-left: 0; /* 완전히 좌측으로 */
+  margin-left: 0; 
   font-size: 1.2rem;
   font-weight: 700;
   color: #5b4b3a;
 }
 
 .primary .tabs {
-  margin-right: 0; /* 완전히 우측으로 */
+  margin-right: 0; 
   display: flex;
   gap: 10px;
 }
@@ -56,18 +55,18 @@
 }
 
 .tab-content.active {
-  display: block; /* 활성화된 탭만 표시 */
+  display: block; 
 }
 
 .tab-content {
-  display: none; /* 기본적으로 숨김 */
-  width: 100%; /* 부모의 너비 100% */
-  height: 100%; /* 부모의 높이 100% */
-  padding: 20px; /* 콘텐츠 안쪽 여백 */
+  display: none; 
+  width: 100%; 
+  height: 100%; 
+  padding: 20px; 
   background-color: #fff;
   color: #333;
   border-radius: 4px;
-  box-sizing: border-box; /* padding 포함된 영역으로 계산 */
+  box-sizing: border-box; 
 }
 .primary .tabs .tab:hover {
   background-color: #f8d6a3;
@@ -75,13 +74,13 @@
 }
 
 .primary .content {
-  flex: 1; /* 남은 공간을 차지 */
-  display: flex; /* 내부 콘텐츠 정렬을 위해 flex 사용 */
+  flex: 1; 
+  display: flex; 
   justify-content: center;
   align-items: center;
   background-color: #fffcf7;
-  padding: 0; /* 여백 제거 */
+  padding: 0; 
   border: 1px solid #e1e4e8;
   border-radius: 4px;
-  position: relative; /* 내부 요소를 절대적으로 배치 가능 */
+  position: relative; 
 }
