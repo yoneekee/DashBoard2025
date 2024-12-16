@@ -1,6 +1,7 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
-import styles from "../style/Secondary4.module.css";
+import styles from "../../style/Secondary4.module.css";
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,10 +11,10 @@ import {
   Title,
   Tooltip,
   Legend,
-  Filler, 
+  Filler,
 } from "chart.js";
 
-// Chart.js 
+// Chart.js
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -68,7 +69,7 @@ const Secondary4 = () => {
         display: true,
         position: "top",
         labels: {
-          color: "#333", 
+          color: "#333",
           font: {
             size: 12,
           },

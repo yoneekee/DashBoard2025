@@ -1,6 +1,6 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
-import styles from "../style/Secondary6.module.css";
+import styles from "../../style/Secondary6.module.css";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -11,7 +11,7 @@ import {
   Legend,
 } from "chart.js";
 
-// Chart.js 
+// Chart.js
 ChartJS.register(
   CategoryScale,
   LinearScale,

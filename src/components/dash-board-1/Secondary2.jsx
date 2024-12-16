@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../style/Secondary2.module.css";
+import styles from "../../style/Secondary2.module.css";
 
 const Secondary2 = () => {
   const schedule = [
