@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import styles from "../style/Dashboard.module.css";
+import MenuBar from "./MenuBar";
 import DashBoard1 from "./DashBoard1";
 import DashBoard2 from "./DashBoard2";
 import DashBoard3 from "./DashBoard3";
 
 const DashBoard = () => {
-  const dashboards = [<DashBoard1 />, <DashBoard2 />, <DashBoard3 />];
+  const dashboards = [
+    { id: 0, label: "Dashboard 1", component: <DashBoard1 /> },
+    { id: 1, label: "Dashboard 2", component: <DashBoard2 /> },
+    { id: 2, label: "Dashboard 3", component: <DashBoard3 /> },
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -23,14 +28,20 @@ const DashBoard = () => {
 
   return (
     <div className={styles.container}>
-      <button className={styles.btn} onClick={handlePrev}>
-        &lt;
-      </button>
-
-      {dashboards[currentIndex]}
-      <button className={styles.btn} onClick={handleNext}>
-        &gt;
-      </button>
+      <MenuBar
+        menus={dashboards}
+        activeMenu={currentIndex}
+        onMenuClick={setCurrentIndex}
+      />
+      <div className={styles.container}>
+        <button className={styles.btn} onClick={handlePrev}>
+          &lt;
+        </button>
+        {dashboards[currentIndex].component}
+        <button className={styles.btn} onClick={handleNext}>
+          &gt;
+        </button>
+      </div>
     </div>
   );
 };

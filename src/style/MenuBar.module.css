@@ -1,0 +1,97 @@
+/* 메뉴 아이콘 컨테이너 */
+.menuContainer {
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  z-index: 50; /* 메뉴가 다른 요소 위에 표시되도록 설정 */
+}
+
+/* 메뉴 아이콘 */
+.menuIcon {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #828282;
+}
+
+.menuIcon:hover {
+  transform: scale(1.1); /* 아이콘 확대 효과 */
+  color: #007bff;
+}
+
+/* 메뉴 아이템 */
+.menuItem {
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #5e5e5e;
+  cursor: pointer;
+  border-bottom: 1px solid #f1f3f5;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.menuItem:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* 메뉴 내용 */
+.menuContent {
+  display: none;
+  position: absolute;
+  background-color: #f6faff;
+  border: 1px solid #bacfe3;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  width: 300px;
+  height: 90.5vh;
+  padding: 3px;
+  overflow-y: auto; /* 스크롤 가능 */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* 풋메뉴 */
+.menuFoot {
+  position: absolute;
+  bottom: 5px;
+  width: 95%;
+  text-align: center;
+  background-color: #d5eaff;
+  border-top: 1px solid #dee2e6;
+  padding: 5px;
+  font-size: 14px;
+  color: #828282;
+}
+
+/* 메뉴 리스트 */
+.menuContent ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.menuContent li {
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #5e5e5e;
+  cursor: pointer;
+  border-bottom: 1px solid #f1f3f5;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.menuContent li:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.activeMenuItem {
+  background-color: #97c9ff;
+}
+
+/* 메뉴 아이콘 호버 시 메뉴 표시 */
+.menuContainer:hover .menuContent {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}

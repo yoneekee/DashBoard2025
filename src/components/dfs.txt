@@ -1,0 +1,34 @@
+return (
+    <div className={styles.container}>
+      {/* 메뉴 아이콘 및 메뉴 */}
+      <div className={styles.menuContainer}>
+        <div className={styles.menuIcon}>☰</div>
+        <div className={styles.menuContent}>
+          <ul>
+            {dashboards.map((dashboard, index) => (
+              <li
+                key={dashboard.id}
+                className={${styles.menuItem} ${
+                  currentIndex === index ? styles.activeMenuItem : ""
+                }}
+                onClick={() => handleMenuClick(index)}
+              >
+                {dashboard.label}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+       {/* 메뉴 아이콘 및 메뉴 */}
+
+      <button className={styles.btn} onClick={handlePrev}>
+        &lt;
+      </button>
+
+      {dashboards[currentIndex].component}
+
+      <button className={styles.btn} onClick={handleNext}>
+        &gt;
+      </button>
+    </div>
+  );
