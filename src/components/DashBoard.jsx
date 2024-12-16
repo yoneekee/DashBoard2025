@@ -28,11 +28,6 @@ const DashBoard = () => {
 
   return (
     <div className={styles.container}>
-      <MenuBar
-        menus={dashboards}
-        activeMenu={currentIndex}
-        onMenuClick={setCurrentIndex}
-      />
       <div className={styles.container}>
         <button className={styles.btn} onClick={handlePrev}>
           &lt;
@@ -42,6 +37,12 @@ const DashBoard = () => {
           &gt;
         </button>
       </div>
+
+      <MenuBar
+        menus={dashboards}
+        activeMenu={currentIndex}
+        onMenuClick={setCurrentIndex}
+      />
     </div>
   );
 };
