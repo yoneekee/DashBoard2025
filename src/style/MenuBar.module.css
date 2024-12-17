@@ -1,14 +1,20 @@
 /* 메뉴 아이콘 컨테이너 */
 .menuContainer {
   position: absolute;
-  bottom: 5px;
+  bottom: 4px;
   left: 7px;
   z-index: 50; /* 메뉴가 다른 요소 위에 표시되도록 설정 */
 }
 
 /* 메뉴 아이콘 */
 .menuIcon {
+  position: fixed;
+  bottom: 1%;
+  left: 0.4%;
   font-size: 24px;
+  transform: translate(4%, 4%); /* 정확히 중앙으로 맞춤 */
+  width: 2vw; /* 화면 너비의 5%를 아이콘 크기로 설정 */
+  height: 2vw; /* 화면 비율에 맞게 정사각형 유지 */
   cursor: pointer;
   padding: 15px 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -45,7 +51,7 @@
   z-index: 100;
   bottom: 0;
   width: 250px;
-  height: 97vh;
+  height: 96vh;
   padding: 3px;
   left: 1px;
   overflow-y: auto; /* 스크롤 가능 */

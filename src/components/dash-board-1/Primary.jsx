@@ -9,10 +9,23 @@ const Primary = () => {
   const [activeTab, setActiveTab] = useState("tab1");
 
   const tabs = [
-    { id: "tab1", label: "1", content: <Tab1Content /> },
-    { id: "tab2", label: "2", content: <Tab2Content /> },
-    { id: "tab3", label: "3", content: <Tab3Content /> },
+    { id: "tab1", label: "1", title: "Check KPI", content: <Tab1Content /> },
+    {
+      id: "tab2",
+      label: "2",
+      title: "Check Whatever",
+      content: <Tab2Content />,
+    },
+    {
+      id: "tab3",
+      label: "3",
+      title: "Check Whatsoever",
+      content: <Tab3Content />,
+    },
   ];
+
+  // 현재 활성 탭의 타이틀 찾기
+  const activeTabTitle = tabs.find((tab) => tab.id === activeTab)?.title || "";
 
   // Swipe
   const handlers = useSwipeable({
@@ -38,7 +51,8 @@ const Primary = () => {
   return (
     <div {...handlers} className={styles.primary}>
       <div className={styles.title}>
-        <div className={styles.siteName}>Check Status</div>
+        {/* 활성 탭의 타이틀을 표시 */}
+        <div className={styles.siteName}>{activeTabTitle}</div>
         <div className={styles.tabs}>
           {tabs.map((tab) => (
             <button

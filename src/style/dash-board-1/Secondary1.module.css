@@ -93,11 +93,15 @@
   border: 1px solid #e1e8f0;
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .statItem:hover {
-  background-color: #eef5fc;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  background-color: #f0f8ff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .statTitle {
