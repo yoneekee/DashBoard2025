@@ -6,7 +6,7 @@
   /*background: linear-gradient(135deg, #e6f8fe, #d5e7fb);*/
   color: #333;
   border-radius: 8px;
-  border: 1px solid #a3c6f8;
+  border: 0.5px solid #b6d5ff;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }

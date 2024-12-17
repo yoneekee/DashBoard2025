@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useSwipeable } from "react-swipeable"; // 라이브러리 추가
 import Tab1Content from "./Tab1Content";
 import Tab2Content from "./Tab2Content";
 import Tab3Content from "./Tab3Content";
@@ -13,10 +14,31 @@ const Primary = () => {
     { id: "tab3", label: "3", content: <Tab3Content /> },
   ];
 
+  // Swipe
+  const handlers = useSwipeable({
+    onSwipedLeft: () => switchTab("next"),
+    onSwipedRight: () => switchTab("prev"),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
+
+  const switchTab = (direction) => {
+    const currentIndex = tabs.findIndex((tab) => tab.id === activeTab);
+    let newIndex;
+
+    if (direction === "next") {
+      newIndex = (currentIndex + 1) % tabs.length;
+    } else if (direction === "prev") {
+      newIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+    }
+
+    setActiveTab(tabs[newIndex].id);
+  };
+
   return (
-    <div className={styles.primary}>
+    <div {...handlers} className={styles.primary}>
       <div className={styles.title}>
-        <div className={styles.siteName}>My Site</div>
+        <div className={styles.siteName}>Check Status</div>
         <div className={styles.tabs}>
           {tabs.map((tab) => (
             <button

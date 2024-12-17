@@ -30,7 +30,11 @@ const DashBoard = () => {
     <div className={styles.container}>
       <div className={styles.container}>
         {/*Prev Button*/}
-        <button className={styles.btn} onClick={handlePrev}>
+        <button
+          className={styles.btn}
+          onClick={handlePrev}
+          style={{ visibility: currentIndex === 0 ? "hidden" : "visible" }}
+        >
           &lt;
         </button>
 
@@ -38,7 +42,14 @@ const DashBoard = () => {
         {dashboards[currentIndex].component}
 
         {/*Next Button*/}
-        <button className={styles.btn} onClick={handleNext}>
+        <button
+          className={styles.btn}
+          onClick={handleNext}
+          style={{
+            visibility:
+              currentIndex === dashboards.length - 1 ? "hidden" : "visible",
+          }}
+        >
           &gt;
         </button>
       </div>
